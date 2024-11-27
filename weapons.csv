@@ -1,0 +1,8 @@
+name,price,tier,min_dmg,max_dmg
+Dagger,5,0,1,1
+Short Sword,10,1,1,2
+Hatchet,10,1,1,2
+Mace,10,1,1,2
+Long Sword,15,2,2,3
+Large Axe,15,2,2,3
+Flail,15,2,2,3
