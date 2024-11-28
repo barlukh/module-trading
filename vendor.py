@@ -5,7 +5,7 @@ import csv
 import classes
 
 # default_path must be set to the directory where the .csv files are located
-default_path = r"C:\Users\boris\OneDrive\Documents\Projects\vendor-trading"
+default_path = r"C:\Users\boris\OneDrive\Documents\Projects\module-trading"
 os.chdir(default_path)
 
 # starting amount of vendor's gold
