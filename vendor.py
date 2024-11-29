@@ -1,4 +1,4 @@
-""" Vendor inventory. Reads through the .csv files and creates respective dictionaries. Also sets initial vendor's gold. """
+""" Vendor inventory. Read through the .csv files and create respective dictionaries. Set initial vendor's gold. """
 
 import os
 import csv

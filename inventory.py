@@ -1,15 +1,15 @@
-""" Player inventory. Manipulates player inventory items. Also sets initial player's gold. """
+""" Player inventory. Manipulate player inventory items. Set initial player's gold. """
 
 import classes
 import vendor
 
 def error_gold(entity):
-    """ Prints a message, if the gold amount is not sufficient for the transaction. """
+    """ Print a message, if the gold amount is not sufficient for the transaction. """
     print(f"{entity} have enough gold for that transaction.")
     print("")
 
 def error_item(entity):
-    """ Prints a message, if the player is trying to search for an item that doesn't exist. """
+    """ Print a message, if the player is trying to search for an item that doesn't exist. """
     print(f"This item is not in {entity} inventory.")
     print("")
 
@@ -18,7 +18,7 @@ player_gold = classes.Gold(100)
 
 player_armor = {}
 def buy_armor(name):
-    """ Buys an Armor item from a vendor. """
+    """ Buy an Armor item from a vendor. """
     if name in player_armor:
         print("You already have that Armor in your inventory.")
         print("")
@@ -36,7 +36,7 @@ def buy_armor(name):
             error_item("the vendor's")
 
 def sell_armor(name):
-    """ Sells an Armor item to a vendor. """
+    """ Sell an Armor item to a vendor. """
     if name in player_armor:
         if player_armor[name].price <= vendor.vendor_gold.gold:
             player_gold.gold += player_armor[name].price
@@ -51,7 +51,7 @@ def sell_armor(name):
 
 player_weapons = {}
 def buy_weapon(name):
-    """ Buys a Weapon item from a vendor. """
+    """ Buy a Weapon item from a vendor. """
     if name in player_weapons:
         print("You already have that Weapon in your inventory.")
         print("")
@@ -69,7 +69,7 @@ def buy_weapon(name):
             error_item("the vendor's")
 
 def sell_weapon(name):
-    """ Sells a Weapon item to a vendor. """
+    """ Sell a Weapon item to a vendor. """
     if name in player_weapons:
         if player_weapons[name].price <= vendor.vendor_gold.gold:
             player_gold.gold += player_weapons[name].price
