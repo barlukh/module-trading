@@ -1,4 +1,4 @@
-""" Blueprint classes for gold (currency) and all items. """
+""" Classes for gold (currency) and all items. """
 
 class Gold:
     """ Default class for gold. """

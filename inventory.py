@@ -1,4 +1,4 @@
-""" Player inventory. Manipulate player inventory items. Set initial player's gold. """
+""" Player inventory. Manipulates player inventory items. Sets initial player's gold. """
 
 import classes
 import vendor
