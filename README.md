@@ -1,3 +1,5 @@
+![screenshot](screenshot.png)
+
 ## Introduction
 Module for simulating a trading interaction with a vendor. There is no graphical user interface, only text-based presentation.
 The main functionality is the interaction between a vendor and a user (player) to buy and sell items.
@@ -16,5 +18,5 @@ The main functionality is the interaction between a vendor and a user (player) t
 - Module 'main' starts the code and the interaction.
 
 ## Installation
-No installation. Run it in a Python interpreter or terminal. The module starts automatically through the trade.trade() function in the 'main' module.
+No installation. Run the code in main.py. The program starts automatically through the trade.trade() function.
 IMPORTANT: Variable default_path in the 'vendor' module must be set to the directory where the .csv files are located on the computer.
