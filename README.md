@@ -1,8 +1,12 @@
-![screenshot](screenshot.png)
+# Vendor Trading
 
-## Introduction
-Module for simulating a trading interaction with a vendor. There is no graphical user interface, only text-based presentation.
-The main functionality is the interaction between a vendor and a user (player) to buy and sell items.
+<p align="center">
+    <img width="1000" src="screenshot.png" alt="screenshot">
+</p>
+
+## About
+Module for simulating a trading interaction. There is no graphical user interface, only text-based presentation in terminal.
+The main functionality is the interaction between a fictional / fantasy vendor and a user (player) to buy and sell items.
 
 ## Functionality
 - Items are predefined, but can be manually edited by the player in their respective .csv files. There are separate files for Armor and Weapons. These files can be therefore manipulated externally to add or remove items.
@@ -15,8 +19,9 @@ The main functionality is the interaction between a vendor and a user (player) t
 - Module 'inventory' also manipulates vendor's and player's gold according to the transaction taking place.
 - Trading happens through the 'trade' module, which contains the main written user interface and calls relevant functions based on the player's input.
 - The input is protected, so if the player enters a wrong input, the module doesn't raise an error, but rather reminds the player of only allowed inputs.
-- Module 'main' starts the code and the interaction.
 
 ## Installation
-No installation. Run the code in main.py. The program starts automatically through the trade.trade() function.
-IMPORTANT: Variable default_path in the 'vendor' module must be set to the directory where the .csv files are located on the computer.
+- Ensure Python is installed on your system.<br>
+- Use pip to install all required packages listed in requirements.txt (pip install -r requirements.txt).<br>
+- Variable default_path in the vendor.py must be set to the directory where the .csv files are located on the computer.
+- Execute the main script to run the program (python main.py).
