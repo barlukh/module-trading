@@ -1,4 +1,10 @@
-""" Player inventory. Manipulates player inventory items. Sets initial player's gold. """
+"""
+Project Title: Vendor Trading
+Filename: inventory.py
+
+Description:
+    Player inventory. Manipulates player inventory items. Sets initial player's gold.
+"""
 
 import classes
 import vendor

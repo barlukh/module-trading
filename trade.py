@@ -1,33 +1,54 @@
-""" Trading functionality and interaction with the vendor. """
+"""
+Project Title: Vendor Trading
+Filename: trade.py
+
+Description:
+    Core trading functionality of the program.
+"""
 
 import inventory
 import vendor
 
-def item_selection(function):
-    """ Ask the player for a name of the item to buy or sell. """
-    print("")
-    print("-- Item selection --")
-    print("0 : Previous menu\n")
-    command = input("Enter a name of an item: ")
-    print("")
-    if command == "0":
-        if function == inventory.buy_armor or function == inventory.buy_weapon:
-            buy_items()
-        else:
-            sell_items()
-    else:
-        function(command)
-        if function == inventory.buy_armor or function == inventory.buy_weapon:
-            buy_items()
-        else:
-            sell_items()
+def trade():
+    """ Start trading with the vendor. Print welcoming message. """
+    print('"Welcome to my shop, traveler! Buying, selling, or just looking around? You won\'t find better prices anywhere else! Now, how can I help?"\n')
+    trade_main()
 
-def trade_categories(category):
-    """ Print all available commands to the player to operate the buy / sell interaction. """
-    print(f"-- Main menu -> {category} items --")
-    print("0 : Previous menu")
-    print("1 : Armor")
-    print("2 : Weapons\n")
+def trade_main():
+    """ Print available commands to the player to operate the main trade interaction. """
+    print("-- Main menu --")
+    print("0 : Exit game")
+    print("1 : Buy items")
+    print("2 : Sell items")
+    print("3 : Available gold\n")
+    player_input()
+
+def player_input():
+    """ Ask the player for an input and call relevant functions based on the input. """
+    allowed_input = [0, 1, 2, 3]
+    command = input_check()
+    if command not in allowed_input:
+        print("Wrong choice, only presented numbers allowed.\n")
+        player_input()
+    elif command == 0:
+        print('"Goodbye, traveler!"')
+    elif command == 1:
+        buy_items()
+    elif command == 2:
+        sell_items()
+    elif command == 3:
+        available_gold()
+        trade_main()
+
+def input_check():
+    """ Check if the input is a valid integer. """
+    try:
+        command = int(input("Enter a choice: "))
+        print("")
+        return command
+    except ValueError:
+        print("")
+        return None
 
 def buy_items():
     """ Buy items from the vendor. """
@@ -90,43 +111,28 @@ def available_gold():
     print(f"The vendor has {vendor.vendor_gold.gold} gold.")
     print(f"You have {inventory.player_gold.gold} gold.\n")
 
-def input_check():
-    """ Check if the input is a valid integer. """
-    try:
-        command = int(input("Enter a choice: "))
-        print("")
-        return command
-    except ValueError:
-        print("")
-        return None
+def trade_categories(category):
+    """ Print all available commands to the player to operate the buy / sell interaction. """
+    print(f"-- Main menu -> {category} items --")
+    print("0 : Previous menu")
+    print("1 : Armor")
+    print("2 : Weapons\n")
 
-def player_input():
-    """ Ask the player for an input and call relevant functions based on the input. """
-    allowed_input = [0, 1, 2, 3]
-    command = input_check()
-    if command not in allowed_input:
-        print("Wrong choice, only presented numbers allowed.\n")
-        player_input()
-    elif command == 0:
-        print('"Goodbye, traveler!"')
-    elif command == 1:
-        buy_items()
-    elif command == 2:
-        sell_items()
-    elif command == 3:
-        available_gold()
-        trade_main()
-
-def trade_main():
-    """ Print available commands to the player to operate the main trade interaction. """
-    print("-- Main menu --")
-    print("0 : Exit game")
-    print("1 : Buy items")
-    print("2 : Sell items")
-    print("3 : Available gold\n")
-    player_input()
-
-def trade():
-    """ Start trading with the vendor. Print welcoming message. """
-    print('"Welcome to my shop, traveler! Buying, selling, or just looking around? You won\'t find better prices anywhere else! Now, how can I help?"\n')
-    trade_main()
+def item_selection(function):
+    """ Ask the player for a name of the item to buy or sell. """
+    print("")
+    print("-- Item selection --")
+    print("0 : Previous menu\n")
+    command = input("Enter a name of an item: ")
+    print("")
+    if command == "0":
+        if function == inventory.buy_armor or function == inventory.buy_weapon:
+            buy_items()
+        else:
+            sell_items()
+    else:
+        function(command)
+        if function == inventory.buy_armor or function == inventory.buy_weapon:
+            buy_items()
+        else:
+            sell_items()

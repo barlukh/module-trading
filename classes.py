@@ -1,4 +1,10 @@
-""" Classes for gold (currency) and all items. """
+"""
+Project Title: Vendor Trading
+Filename: classes.py
+
+Description:
+    Classes for gold (currency) and all items.
+"""
 
 class Gold:
     """ Default class for gold. """
