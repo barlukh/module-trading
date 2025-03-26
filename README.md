@@ -21,7 +21,7 @@ The main functionality is the interaction between a fictional / fantasy vendor a
 - The input is protected, so if the player enters a wrong input, the module doesn't raise an error, but rather reminds the player of only allowed inputs.
 
 ## Installation
-- Ensure Python is installed on your system.<br>
-- Use pip to install all required packages listed in requirements.txt (pip install -r requirements.txt).<br>
+- Ensure Python is installed on your system.
+- Use pip to install all required packages listed in requirements.txt (pip install -r requirements.txt).
 - Variable default_path in the vendor.py must be set to the directory where the .csv files are located on the computer.
 - Execute the main script to run the program (python main.py).
